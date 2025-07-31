@@ -1,0 +1,42 @@
+*edit-command-line.txt*   Edit command line in floating window
+
+==============================================================================
+CONTENTS                                            *edit-command-line-contents*
+
+1. Introduction ........................ |edit-command-line-introduction|
+2. Commands ............................ |edit-command-line-commands|
+3. Configuration ....................... |edit-command-line-configuration|
+
+==============================================================================
+INTRODUCTION                                    *edit-command-line-introduction*
+
+Edit command line in a floating window.
+
+==============================================================================
+COMMANDS                                            *edit-command-line-commands*
+
+:EditCommandLine                                             *:EditCommandLine*
+    Open floating window to edit command line.
+
+==============================================================================
+CONFIGURATION                                  *edit-command-line-configuration*
+
+Setup function:
+>lua
+    require('edit-command-line').setup({
+        window = {
+            width_ratio = 0.8,
+            height_ratio = 0.6,
+            border = "rounded",
+            title = "Edit Command Line",
+            title_pos = "center",
+        },
+        buffer = {
+            filetype = "sh",
+        },
+        processing = {
+            delay_ms = 50,
+        },
+    })
+<
+vim:tw=78:ts=8:ft=help:norl:
