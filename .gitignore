@@ -1,0 +1,27 @@
+# Created by https://www.toptal.com/developers/gitignore/api/rust,direnv
+# Edit at https://www.toptal.com/developers/gitignore?templates=rust,direnv
+
+### devenv ###
+.devenv
+
+### direnv ###
+.direnv
+
+### nix ###
+result
+
+### pre-commit ###
+.pre-commit-config.yaml
+
+### Deno ###
+/.idea/
+/.vscode/
+
+/node_modules
+
+.env
+*.orig
+*.pyc
+*.swp
+
+# End of https://www.toptal.com/developers/gitignore/api/deno
