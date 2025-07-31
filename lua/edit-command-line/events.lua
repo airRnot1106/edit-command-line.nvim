@@ -6,17 +6,11 @@ local M = {}
 
 function M.setup_buf_leave_handler(buf, term_job_id)
     local opts = config.get()
-    local processed = false
 
     vim.api.nvim_create_autocmd("BufLeave", {
         buffer = buf,
         once = true,
         callback = function()
-            if processed then
-                return
-            end
-            processed = true
-
             vim.defer_fn(function()
                 if vim.api.nvim_buf_is_valid(buf) then
                     local content = ui.get_buffer_content(buf)
