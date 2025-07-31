@@ -13,9 +13,6 @@ M.defaults = {
         buftype = "nofile",
         swapfile = false,
     },
-    keymaps = {
-        cancel = "<Esc>",
-    },
     processing = {
         delay_ms = 50,
     },
